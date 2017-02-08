@@ -2,7 +2,9 @@ Rails.application.routes.draw do
   root 'animes#index'
 
   get 'animes' =>'animes#index'
-  
+
+  get 'animes/new' =>'animes#new'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
