@@ -5,6 +5,7 @@ RSpec.describe 'new anime page' do
 
 	visit '/animes/new'
 	expect(page).to have_field("Name")
+
 	
   end
 end

@@ -1,11 +1,20 @@
 class AnimesController <ApplicationController
 
  def index
- 	@animes=Anime.all
+ 	@animes = Anime.all
  end
 
- def new 
- 	fail
+ def new
  end
 
-end
+ def create
+ 	Anime.create(name: params[:name])
+ 	redirect_to "/animes"
+ end
+
+ def show
+
+ 	@anime = Anime.find(params[:id])
+ end
+
+end 

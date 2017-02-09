@@ -5,7 +5,7 @@ RSpec.describe 'listing animes' do
  	anime1 =Anime.create(name: "naruto")
 	anime2 =Anime.create(name: "pikachu")
 
-	visit 'animes'
+	visit '/animes'
 	expect(page).to have_text(anime1.name)
 	expect(page).to have_text(anime2.name)
   end
