@@ -17,4 +17,22 @@ class AnimesController <ApplicationController
  	@anime = Anime.find(params[:id])
  end
 
-end 
+ def edit
+    @anime =Anime.find(params[:id])
+ end
+
+ def update
+ 	anime =  Anime.find(params[:id])
+ 	anime.name = params[:name]
+ 	anime.save
+ 	redirect_to '/animes'
+ end
+
+
+def destroy
+	anime =  Anime.find(params[:id])
+ 	anime.destroy
+ 	redirect_to '/animes'
+end
+ end
+ 

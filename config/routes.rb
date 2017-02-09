@@ -8,8 +8,12 @@ Rails.application.routes.draw do
   post '/animes' =>'animes#create'
 
  get '/animes/:id' =>'animes#show'
-  
 
+ get '/animes/:id/edit'=>'animes#edit'
+  
+  patch 'animes/:id' =>'animes#update'
+
+get 'animes/:id'=>'animes#destroy'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
